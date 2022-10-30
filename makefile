@@ -1,11 +1,10 @@
-deps:CRLF
-	pip install -r requirements.txt; \CRLF
-	pip install -r test_requirements.txtCRLF
-lint:CRLF
-	flake8 hello_world testCRLF
-run:CRLF
-	python.main.pyCRLF
-.PHONY: testCRLF
-test:CRLF
+deps:
+	pip install -r requirements.txt; \
+	pip install -r test_requirements.txt
+lint:
+	flake8 hello_world test
+run:
+	python.main.py
+.PHONY: test
+test:
 	PYTHONPATH=. py.test --verbose -s
-
